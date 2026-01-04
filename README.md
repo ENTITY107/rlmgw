@@ -92,7 +92,7 @@ We support several different REPL environments that run on separate, cloud-based
 
 #### Modal Sandboxes <img src="https://github.com/modal-labs.png" alt="Modal" height="20" style="vertical-align: middle;"/>
 To use [Modal Sandboxes](https://modal.com/docs/guide/sandboxes) as the REPL environment, you need to install and authenticate your Modal account.
-```
+```bash
 uv add modal  # add modal library
 modal setup   # authenticate account
 ```
@@ -105,7 +105,7 @@ modal setup   # authenticate account
 > **Prime Intellect Sandboxes are not yet implemented** in `rlm`. This feature is not available at the moment until we patch some bugs.
 
 See [Prime CLI setup instructions](https://docs.primeintellect.ai/inference/overview) for getting setup. You will need to set your CLI key.
-```
+```bash
 export PRIME_API_KEY=...
 ```
 
